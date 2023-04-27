@@ -22,8 +22,8 @@ pipeline {
             steps {
                 echo 'Deploying....'
                 // sh 'git clone "https://github.com/AsadIqbal6019/react-demo-app-1.git"'
-//                 sh "rm -rf *.tar"
-                sh "tar -czvf react-app-2.tar.gz *"
+                sh "rm -rf *.tar"
+                sh "tar -czvf react-app-$BUILD_NUMBER.tar.gz *"
             }
         }
     }
