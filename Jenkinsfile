@@ -1,5 +1,8 @@
 pipeline {
     agent any
+     tools {
+        nodejs 'Nodejs'
+    }
 
     stages {
         stage('Build') {
@@ -18,7 +21,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
-                sh 'git clone "https://github.com/AsadIqbal6019/react-demo-app-1.git"'
+                // sh 'git clone "https://github.com/AsadIqbal6019/react-demo-app-1.git"'
             }
         }
     }
