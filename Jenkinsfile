@@ -22,7 +22,7 @@ pipeline {
             steps {
                 echo 'Deploying....'
                 // sh 'git clone "https://github.com/AsadIqbal6019/react-demo-app-1.git"'
-                sh "tar -czvf react-app-1.tar.gz react-demo-app-1"
+                sh "tar -czvf react-app-1-$BUILD_NUMBER.tar.gz /var/jenkins_home/workspace/react-app-demo-1"
             }
         }
     }
