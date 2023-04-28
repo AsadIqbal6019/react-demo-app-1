@@ -11,6 +11,8 @@ pipeline {
                 echo 'Building..'
                 sh 'npm install'
                 sh 'npm run build'
+                sh 'npm install -g pm2'
+                sh 'pm2 start app.config.json && pm2 list'
 
             }
         }
@@ -28,7 +30,7 @@ pipeline {
                 // sh "tar -czvf react-app-'$BUILD_NUMBER'.tar.gz *"
 //                 sh "cp react-app-'$BUILD_NUMBER'.tar.gz ~/Music"
                 // sh "docker exec -it fde77e00f7ed /bin/bash"
-                sh "docker cp fde77e00f7ed:/var/jenkins_home/workspace/react-app-demo-1 ~/Music"
+                // sh "docker cp fde77e00f7ed:/var/jenkins_home/workspace/react-app-demo-1 ~/Music"
 //                 sh "ls"
 //                 sh "docker ps"
             }
