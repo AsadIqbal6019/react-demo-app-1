@@ -2,6 +2,7 @@ pipeline {
     agent any
      tools {
         nodejs 'Nodejs'
+        docker 'Docker'
     }
 
     stages {
@@ -24,6 +25,7 @@ pipeline {
                 // sh 'git clone "https://github.com/AsadIqbal6019/react-demo-app-1.git"'
                 sh "rm -rf *.tar"
                 sh "tar -czvf react-app-'$BUILD_NUMBER'.tar.gz *"
+                sh "docker ps"
             }
         }
     }
