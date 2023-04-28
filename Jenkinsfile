@@ -17,7 +17,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing the web Application'
-                echo "Container_id>>>> 'DOCKER_CONTAINER_IDS'"
+                echo  DOCKER_CONTAINER_IDS
             }
         }
         stage('Deploy') {
