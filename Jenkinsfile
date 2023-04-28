@@ -2,7 +2,7 @@ pipeline {
     agent any
      tools {
         nodejs 'Nodejs'
-        docker-desktop 'Docker-desktop'
+        Docker 'Docker-desktop'
     }
 
     stages {
