@@ -6,7 +6,7 @@ pipeline {
     }
 
      environment {          
-        deploy_cmd = "./deployment.sh"
+        deploy_cmd = "/deployment.sh"
     }
 
     stages {
