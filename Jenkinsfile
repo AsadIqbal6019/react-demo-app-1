@@ -35,7 +35,6 @@ pipeline {
 //                 sh "docker ps"
                 docker('Asad-Docker') {
                     sh 'docker ps'
-
                 }
 
             }
