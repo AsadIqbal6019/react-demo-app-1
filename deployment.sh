@@ -1,5 +1,6 @@
 # !/bin/bash -i
-sudo mkdir app2
+pwd
+# sudo mkdir app2
 # cd /home/ubuntu/medusForefront/medusa-frontend
 # git pull
 # git checkout $1

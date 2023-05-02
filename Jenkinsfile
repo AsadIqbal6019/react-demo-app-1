@@ -5,9 +5,9 @@ pipeline {
         // Docker 'Docker'
     }
 
-    //  environment {          
-        // deploy_cmd = "'./deployment.sh'"
-    // }
+     environment {          
+        deploy_cmd = "'./deployment.sh'"
+    }
 
     stages {
         stage('Build') {
@@ -38,18 +38,18 @@ pipeline {
                 //  sh "ls"
                 // sh "docker ps"
                 script {
-                    // sshagent(['ec2-server-key']) {
-                    //     sh "ssh -o StrictHostKeyChecking=no ubuntu@54.204.161.188"
-                    //     sh "pwd"
-                    //     // sh "cd /home/ubuntu"
-                    //     // sh "mkdir app1"
-                    // }
                     sshagent(credentials: ['ec2-server-key']) {
-                        sh "ssh -o StrictHostKeyChecking=no ubuntu@54.204.161.188 '\n' pwd '\n' git clone https://github.com/AsadIqbal6019/react-demo-app-1.git '\n' cd react-demo-app-1 '\n' npm install '\n' npm run build"
+                        sh "ssh -o StrictHostKeyChecking=no ubuntu@54.204.161.188 ${DEPLOY_SRV}"
                         sh "pwd"
                         // sh "cd /home/ubuntu"
                         // sh "mkdir app1"
                     }
+                    // sshagent(credentials: ['ec2-server-key']) {
+                    //     sh "ssh -o StrictHostKeyChecking=no ubuntu@54.204.161.188 '\n' pwd '\n' git clone https://github.com/AsadIqbal6019/react-demo-app-1.git '\n' cd react-demo-app-1 '\n' npm install '\n' npm run build"
+                    //     sh "pwd"
+                    //     // sh "cd /home/ubuntu"
+                    //     // sh "mkdir app1"
+                    // }
                 }
                 echo 'Done'
 
