@@ -1,8 +1,8 @@
-pipeline {
+pipeline 
     agent any
      tools {
         nodejs 'Nodejs'
-//         Docker 'Docker'
+        // Docker 'Docker'
     }
 
     stages {
@@ -19,7 +19,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing the web Application'
-//                 echo  DOCKER_CONTAINER_ID
+            //    echo  DOCKER_CONTAINER_ID
             }
         }
         stage('Deploy') {
@@ -28,18 +28,17 @@ pipeline {
                 // sh 'git clone "https://github.com/AsadIqbal6019/react-demo-app-1.git"'
                 // sh "rm -rf *.tar"
                 // sh "tar -czvf react-app-'$BUILD_NUMBER'.tar.gz *"
-//                 sh "cp react-app-'$BUILD_NUMBER'.tar.gz ~/Music"
+                //  sh "cp react-app-'$BUILD_NUMBER'.tar.gz ~/Music"
                 // sh "docker exec -it fde77e00f7ed /bin/bash"
                 // sh "docker cp fde77e00f7ed:/var/jenkins_home/workspace/react-app-demo-1 ~/Music"
-//                 sh "ls"
-//                 sh "docker ps"
+                //  sh "ls"
+                // sh "docker ps"
                 script {
                     // def dockerCmd = 'docker run  -p 3000:3000 -d jennykibiri/sample-react-app:latest'
                     sshagent(['ec2-server-key']) {
                         sh "ssh -o StrictHostKeyChecking=no ubuntu@54.204.161.188"
                         sh "mkdir app"
                     }
-
                 }
         }
     }
