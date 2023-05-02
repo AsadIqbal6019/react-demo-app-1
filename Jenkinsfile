@@ -36,6 +36,7 @@ pipeline {
                 script {
                     sshagent(['ec2-server-key']) {
                         sh "ssh -o StrictHostKeyChecking=no ubuntu@54.204.161.188"
+                        sh "pwd"
                         sh "mkdir app1"
                         echo 'Done1'
                     }
