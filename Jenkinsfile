@@ -9,8 +9,8 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                sh 'npm install'
-                sh 'npm run build'
+                // sh 'npm install'
+                // sh 'npm run build'
                 // sh 'npm install -g pm2'
                 // sh 'pm2 start app.config.json && pm2 list'
 
