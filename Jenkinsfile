@@ -6,7 +6,7 @@ pipeline {
     }
 
      environment {          
-        deploy_cmd = "'/home/asad/Music/my-app/deployment.sh'"
+        deploy_cmd = "'./deployment.sh'"
     }
 
     stages {
