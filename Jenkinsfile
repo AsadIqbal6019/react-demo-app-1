@@ -38,7 +38,13 @@ pipeline {
                 //  sh "ls"
                 // sh "docker ps"
                 script {
-                    sshagent(['ec2-server-key']) {
+                    // sshagent(['ec2-server-key']) {
+                    //     sh "ssh -o StrictHostKeyChecking=no ubuntu@54.204.161.188"
+                    //     sh "pwd"
+                    //     // sh "cd /home/ubuntu"
+                    //     // sh "mkdir app1"
+                    // }
+                    sshagent(credentials: ['ec2-server-key']) {
                         sh "ssh -o StrictHostKeyChecking=no ubuntu@54.204.161.188"
                         sh "pwd"
                         // sh "cd /home/ubuntu"
