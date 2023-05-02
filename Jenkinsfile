@@ -6,7 +6,7 @@ pipeline {
     }
 
      environment {          
-        deploy_cmd = "'/home/asad/Documents/Projects/medusa-frontend/deployment.sh'"
+        deploy_cmd = "'/home/asad/Music/my-app/deployment.sh'"
     }
 
     stages {
