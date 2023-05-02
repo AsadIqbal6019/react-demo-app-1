@@ -1,4 +1,4 @@
-# !/bin/bash -i
+!/bin/bash -i
 pwd
 # sudo mkdir app2
 # cd /home/ubuntu/medusForefront/medusa-frontend
