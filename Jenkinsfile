@@ -5,9 +5,9 @@ pipeline {
         // Docker 'Docker'
     }
 
-     environment {          
+    //  environment {          
         // deploy_cmd = "'./deployment.sh'"
-    }
+    // }
 
     stages {
         stage('Build') {
