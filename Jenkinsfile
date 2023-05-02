@@ -34,11 +34,10 @@ pipeline
                 //  sh "ls"
                 // sh "docker ps"
                 script {
-                    // def dockerCmd = 'docker run  -p 3000:3000 -d jennykibiri/sample-react-app:latest'
-                    sshagent(['ec2-server-key']) {
-                        sh "ssh -o StrictHostKeyChecking=no ubuntu@54.204.161.188"
-                        sh "mkdir app"
-                    }
+                    // sshagent(['ec2-server-key']) {
+                    //     sh "ssh -o StrictHostKeyChecking=no ubuntu@54.204.161.188"
+                    //     sh "mkdir app"
+                    // }
                 }
         }
     }
