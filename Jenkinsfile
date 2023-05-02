@@ -5,6 +5,10 @@ pipeline {
         // Docker 'Docker'
     }
 
+     environment {          
+        deploy_cmd = "'/home/asad/Documents/Projects/medusa-frontend/deployment.sh'"
+    }
+
     stages {
         stage('Build') {
             steps {
@@ -35,9 +39,9 @@ pipeline {
                 // sh "docker ps"
                 script {
                     sshagent(['ec2-server-key']) {
-                        sh "ssh -o StrictHostKeyChecking=no ubuntu@54.204.161.188"
-                        sh "cd /home/ubuntu"
-                        sh "mkdir app1"
+                        sh "ssh -o StrictHostKeyChecking=no ubuntu@54.204.161.188 -l -c ${deploy_cmd}"
+                        // sh "cd /home/ubuntu"
+                        // sh "mkdir app1"
                     }
                 }
                 echo 'Done'
