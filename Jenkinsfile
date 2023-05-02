@@ -38,6 +38,7 @@ pipeline {
                         sh "ssh -o StrictHostKeyChecking=no ubuntu@54.204.161.188"
                         sh "cd /home/ubuntu"
                         sh "mkdir app1"
+                        echo 'Done1'
                     }
                 }
                 echo 'Done'
