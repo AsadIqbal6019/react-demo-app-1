@@ -6,7 +6,7 @@ pipeline {
     }
 
      environment {          
-        deploy_cmd = "'./deployment.sh'"
+        deploy_cmd = "./deployment.sh"
     }
 
     stages {
@@ -39,7 +39,7 @@ pipeline {
                 // sh "docker ps"
                 script {
                     sshagent(credentials: ['ec2-server-key']) {
-                        sh "ssh -o StrictHostKeyChecking=no ubuntu@54.204.161.188 ${DEPLOY_SRV}"
+                        sh "ssh -o StrictHostKeyChecking=no ubuntu@54.204.161.188 ${deploy_cmd}"
                         sh "pwd"
                         // sh "cd /home/ubuntu"
                         // sh "mkdir app1"
