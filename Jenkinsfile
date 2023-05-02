@@ -45,10 +45,11 @@ pipeline {
                     //     // sh "mkdir app1"
                     // }
                     sshagent(credentials: ['ec2-server-key']) {
-                        sh "ssh -o StrictHostKeyChecking=no ubuntu@54.204.161.188 '\n' pwd '\n' \ 
-                        git clone https://github.com/AsadIqbal6019/react-demo-app-1.git '\n' \ 
-                        cd react-demo-app-1 '\n' \
-                        npm install '\n' \
+                        sh "ssh -o StrictHostKeyChecking=no ubuntu@54.204.161.188 '\n' 
+                        pwd '\n'
+                        git clone https://github.com/AsadIqbal6019/react-demo-app-1.git '\n'
+                        cd react-demo-app-1 '\n'
+                        npm install '\n'
                         npm run build"
                         sh "pwd"
                         // sh "cd /home/ubuntu"
