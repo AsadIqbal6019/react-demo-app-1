@@ -45,8 +45,8 @@ pipeline {
                     //     // sh "mkdir app1"
                     // }
                     sshagent(credentials: ['ec2-server-key']) {
-                        sh "ssh -o StrictHostKeyChecking=no ubuntu@54.204.161.188 && 
-                        pwd &&
+                        sh "ssh -o StrictHostKeyChecking=no ubuntu@54.204.161.188 >
+                        pwd >
                         node --version"
                         sh "pwd"
                         // sh "cd /home/ubuntu"
