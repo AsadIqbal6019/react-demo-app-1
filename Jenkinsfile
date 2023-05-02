@@ -33,12 +33,12 @@ pipeline {
                 // sh "docker cp fde77e00f7ed:/var/jenkins_home/workspace/react-app-demo-1 ~/Music"
                 //  sh "ls"
                 // sh "docker ps"
-                script {
+                // script {
                     // sshagent(['ec2-server-key']) {
                     //     sh "ssh -o StrictHostKeyChecking=no ubuntu@54.204.161.188"
                     //     sh "mkdir app"
                     // }
-                }
+                // }
         }
     }
 }
