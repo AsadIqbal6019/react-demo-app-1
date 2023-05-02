@@ -33,9 +33,6 @@ pipeline {
                 // sh "docker cp fde77e00f7ed:/var/jenkins_home/workspace/react-app-demo-1 ~/Music"
 //                 sh "ls"
 //                 sh "docker ps"
-                docker('Asad-Docker') {
-                    sh 'docker ps'
-                }
 
             }
         }
