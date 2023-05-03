@@ -38,7 +38,7 @@ pipeline {
                 // sh "docker cp fde77e00f7ed:/var/jenkins_home/workspace/react-app-demo-1 ~/Music"
                 //  sh "ls"
                 // sh "docker ps"
-                ssh -i "Asad-key-pair.pem" ubuntu@ec2-54-196-190-10.compute-1.amazonaws.com
+                // ssh -i "Asad-key-pair.pem" ubuntu@ec2-54-196-190-10.compute-1.amazonaws.com
                     sshagent(credentials: ['ec2-server-key']) {
                         sh "ssh -o StrictHostKeyChecking=no ubuntu@54.196.190.10 '\n' chmod +x /home/ubuntu/react-demo-app-1/deployment.sh '\n' ${deploy_cmd}"
                         sh "pwd"
