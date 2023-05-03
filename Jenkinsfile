@@ -37,12 +37,9 @@ pipeline {
                 // sh "docker cp fde77e00f7ed:/var/jenkins_home/workspace/react-app-demo-1 ~/Music"
                 //  sh "ls"
                 // sh "docker ps"
-                script {
                     sshagent(credentials: ['ec2-server-key']) {
                         sh "ssh -o StrictHostKeyChecking=no ubuntu@54.204.161.188 ${deploy_cmd}"
                         sh "pwd"
-                        // sh "cd /home/ubuntu"
-                        // sh "mkdir app1"
                     }
                     // sshagent(credentials: ['ec2-server-key']) {
                     //     sh "ssh -o StrictHostKeyChecking=no ubuntu@54.204.161.188 '\n' pwd '\n' git clone https://github.com/AsadIqbal6019/react-demo-app-1.git '\n' cd react-demo-app-1 '\n' npm install '\n' npm run build"
@@ -50,7 +47,7 @@ pipeline {
                     //     // sh "cd /home/ubuntu"
                     //     // sh "mkdir app1"
                     // }
-                }
+                
                 echo 'Done'
 
         }
