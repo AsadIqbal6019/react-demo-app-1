@@ -6,7 +6,7 @@ pipeline {
     }
 
      environment {          
-        deploy_cmd = "./deployment.sh"
+        deploy_cmd = "/home/ubuntu/deployment.sh"
         // deploy_cmd = "/var/jenkins_home/workspace/react-app-demo-1/deployment.sh"
     }
 
