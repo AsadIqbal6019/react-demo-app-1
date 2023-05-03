@@ -39,7 +39,7 @@ pipeline {
                 //  sh "ls"
                 // sh "docker ps"
                     sshagent(credentials: ['ec2-server-key']) {
-                        sh "ssh -o StrictHostKeyChecking=no ubuntu@54.204.161.188 '\n' git clone https://github.com/AsadIqbal6019/react-demo-app-1.git '\n' chmod +x /home/ubuntu/react-demo-app-1/deployment.sh '\n' ${deploy_cmd}"
+                        sh "ssh -o StrictHostKeyChecking=no ubuntu@54.204.161.188 '\n' chmod +x /home/ubuntu/react-demo-app-1/deployment.sh '\n' ${deploy_cmd}"
                         sh "pwd"
                     }
                     // sshagent(credentials: ['ec2-server-key']) {
